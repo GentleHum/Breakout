@@ -14,6 +14,9 @@
 		7EE626451E1EB394004C9D9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE626431E1EB394004C9D9C /* LaunchScreen.storyboard */; };
 		7EE626501E1EB394004C9D9C /* BreakoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6264F1E1EB394004C9D9C /* BreakoutTests.swift */; };
 		7EFBD0A61E20457200E3122C /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBD0A51E20457200E3122C /* SettingsTableViewController.swift */; };
+		7EFBD0A81E2046DC00E3122C /* BrickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBD0A71E2046DC00E3122C /* BrickView.swift */; };
+		7EFBD0AA1E2046EE00E3122C /* PaddleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBD0A91E2046EE00E3122C /* PaddleView.swift */; };
+		7EFBD0AC1E2046FC00E3122C /* BallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBD0AB1E2046FC00E3122C /* BallView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		7EE6264F1E1EB394004C9D9C /* BreakoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakoutTests.swift; sourceTree = "<group>"; };
 		7EE626511E1EB394004C9D9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EFBD0A51E20457200E3122C /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		7EFBD0A71E2046DC00E3122C /* BrickView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrickView.swift; sourceTree = "<group>"; };
+		7EFBD0A91E2046EE00E3122C /* PaddleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddleView.swift; sourceTree = "<group>"; };
+		7EFBD0AB1E2046FC00E3122C /* BallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,9 @@
 		7EFBD0A41E20435E00E3122C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7EFBD0AB1E2046FC00E3122C /* BallView.swift */,
+				7EFBD0A71E2046DC00E3122C /* BrickView.swift */,
+				7EFBD0A91E2046EE00E3122C /* PaddleView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -236,7 +245,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EFBD0A81E2046DC00E3122C /* BrickView.swift in Sources */,
 				7EE6263D1E1EB394004C9D9C /* GameViewController.swift in Sources */,
+				7EFBD0AA1E2046EE00E3122C /* PaddleView.swift in Sources */,
+				7EFBD0AC1E2046FC00E3122C /* BallView.swift in Sources */,
 				7EE6263B1E1EB394004C9D9C /* AppDelegate.swift in Sources */,
 				7EFBD0A61E20457200E3122C /* SettingsTableViewController.swift in Sources */,
 			);
