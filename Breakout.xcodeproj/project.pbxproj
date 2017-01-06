@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		7EE6263B1E1EB394004C9D9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6263A1E1EB394004C9D9C /* AppDelegate.swift */; };
-		7EE6263D1E1EB394004C9D9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6263C1E1EB394004C9D9C /* ViewController.swift */; };
+		7EE6263D1E1EB394004C9D9C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6263C1E1EB394004C9D9C /* GameViewController.swift */; };
 		7EE626401E1EB394004C9D9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE6263E1E1EB394004C9D9C /* Main.storyboard */; };
 		7EE626421E1EB394004C9D9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EE626411E1EB394004C9D9C /* Assets.xcassets */; };
 		7EE626451E1EB394004C9D9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE626431E1EB394004C9D9C /* LaunchScreen.storyboard */; };
 		7EE626501E1EB394004C9D9C /* BreakoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6264F1E1EB394004C9D9C /* BreakoutTests.swift */; };
+		7EFBD0A61E20457200E3122C /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBD0A51E20457200E3122C /* SettingsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +29,7 @@
 /* Begin PBXFileReference section */
 		7EE626371E1EB394004C9D9C /* Breakout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breakout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE6263A1E1EB394004C9D9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7EE6263C1E1EB394004C9D9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7EE6263C1E1EB394004C9D9C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		7EE6263F1E1EB394004C9D9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7EE626411E1EB394004C9D9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EE626441E1EB394004C9D9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +37,7 @@
 		7EE6264B1E1EB394004C9D9C /* BreakoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreakoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE6264F1E1EB394004C9D9C /* BreakoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakoutTests.swift; sourceTree = "<group>"; };
 		7EE626511E1EB394004C9D9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EFBD0A51E20457200E3122C /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +70,8 @@
 		7EA7EA1A1E1ECC1100E993C5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7EE6263C1E1EB394004C9D9C /* ViewController.swift */,
+				7EE6263C1E1EB394004C9D9C /* GameViewController.swift */,
+				7EFBD0A51E20457200E3122C /* SettingsTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -107,6 +110,7 @@
 				7EA7EA1A1E1ECC1100E993C5 /* Controllers */,
 				7EA7EA1B1E1ECC1F00E993C5 /* Storyboards */,
 				7EA7EA191E1ECC0700E993C5 /* Supporting Files */,
+				7EFBD0A41E20435E00E3122C /* Views */,
 			);
 			path = Breakout;
 			sourceTree = "<group>";
@@ -118,6 +122,13 @@
 				7EE626511E1EB394004C9D9C /* Info.plist */,
 			);
 			path = BreakoutTests;
+			sourceTree = "<group>";
+		};
+		7EFBD0A41E20435E00E3122C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,8 +236,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EE6263D1E1EB394004C9D9C /* ViewController.swift in Sources */,
+				7EE6263D1E1EB394004C9D9C /* GameViewController.swift in Sources */,
 				7EE6263B1E1EB394004C9D9C /* AppDelegate.swift in Sources */,
+				7EFBD0A61E20457200E3122C /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
