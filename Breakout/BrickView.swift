@@ -9,6 +9,10 @@
 import UIKit
 
 class BrickView: UIView {
+    
+    var width = 20 { didSet { setNeedsDisplay() } }
+    var height = 10 { didSet { setNeedsDisplay() } }
+    var color = UIColor.blue { didSet { setNeedsDisplay() } }
 
     /*
     // Only override draw() if you perform custom drawing.
