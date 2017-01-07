@@ -13,6 +13,8 @@ class PropertySettings: NSObject {
     var numberOfBricksInRow = 5
     var numberOfHitsToEliminateBrick = 1
     var brickColor = UIColor.blue
+    var paddleLength = 20
+    
     
     
     func load() { // load from NSUserDefaults
