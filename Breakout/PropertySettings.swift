@@ -12,6 +12,7 @@ class PropertySettings: NSObject {
     
     var numberOfBricksInRow = 5
     var numberOfHitsToEliminateBrick = 1
+    var brickColor = UIColor.blue
     
     
     func load() { // load from NSUserDefaults
