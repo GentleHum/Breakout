@@ -9,6 +9,10 @@
 import UIKit
 
 class PaddleView: UIView {
+    
+    var color = UIColor.green { didSet { setNeedsDisplay() } }
+    
+    
 
     /*
     // Only override draw() if you perform custom drawing.
