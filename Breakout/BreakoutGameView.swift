@@ -51,4 +51,9 @@ class BreakoutGameView: UIView, UIDynamicAnimatorDelegate {
         }
  */
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+    }
+
 }
