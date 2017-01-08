@@ -9,7 +9,7 @@
 import UIKit
 
 class BallView: UIView {
-    var color = UIColor.green { didSet { setNeedsDisplay() } }
+    var color = UIColor.red { didSet { setNeedsDisplay() } }
 
     /*
     // Only override draw() if you perform custom drawing.

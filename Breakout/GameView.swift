@@ -1,18 +1,14 @@
 //
-//  PaddleView.swift
+//  GameView.swift
 //  Breakout
 //
-//  Created by Mike Vork on 1/6/17.
+//  Created by Owner on 1/7/17.
 //  Copyright © 2017 Mike Vork. All rights reserved.
 //
 
 import UIKit
 
-class PaddleView: UIView {
-    
-    var color = UIColor.green { didSet { setNeedsDisplay() } }
-    
-    
+class GameView: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.
