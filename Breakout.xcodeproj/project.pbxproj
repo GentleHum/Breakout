@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EAD465B1E22F03700689E10 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD465A1E22F03700689E10 /* UIKit+Extensions.swift */; };
+		7EAD465D1E22F09400689E10 /* BreakoutGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD465C1E22F09400689E10 /* BreakoutGameView.swift */; };
 		7EE6263B1E1EB394004C9D9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6263A1E1EB394004C9D9C /* AppDelegate.swift */; };
 		7EE6263D1E1EB394004C9D9C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6263C1E1EB394004C9D9C /* GameViewController.swift */; };
 		7EE626401E1EB394004C9D9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE6263E1E1EB394004C9D9C /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7EAD465A1E22F03700689E10 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
+		7EAD465C1E22F09400689E10 /* BreakoutGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakoutGameView.swift; sourceTree = "<group>"; };
 		7EE626371E1EB394004C9D9C /* Breakout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breakout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE6263A1E1EB394004C9D9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EE6263C1E1EB394004C9D9C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +97,14 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
+		7EAD46591E22F01100689E10 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7EAD465A1E22F03700689E10 /* UIKit+Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		7EE6262E1E1EB394004C9D9C = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +128,7 @@
 			children = (
 				7EE6263A1E1EB394004C9D9C /* AppDelegate.swift */,
 				7EA7EA1A1E1ECC1100E993C5 /* Controllers */,
+				7EAD46591E22F01100689E10 /* Extensions */,
 				7EFBD0AD1E204AC100E3122C /* Models */,
 				7EA7EA1B1E1ECC1F00E993C5 /* Storyboards */,
 				7EA7EA191E1ECC0700E993C5 /* Supporting Files */,
@@ -137,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				7EFBD0AB1E2046FC00E3122C /* BallView.swift */,
+				7EAD465C1E22F09400689E10 /* BreakoutGameView.swift */,
 				7EFBD0A71E2046DC00E3122C /* BrickView.swift */,
 				7EFBD0A91E2046EE00E3122C /* PaddleView.swift */,
 			);
@@ -258,7 +272,9 @@
 			files = (
 				7EFBD0A81E2046DC00E3122C /* BrickView.swift in Sources */,
 				7EE6263D1E1EB394004C9D9C /* GameViewController.swift in Sources */,
+				7EAD465B1E22F03700689E10 /* UIKit+Extensions.swift in Sources */,
 				7EFBD0AF1E204AE500E3122C /* PropertySettings.swift in Sources */,
+				7EAD465D1E22F09400689E10 /* BreakoutGameView.swift in Sources */,
 				7EFBD0AA1E2046EE00E3122C /* PaddleView.swift in Sources */,
 				7EFBD0AC1E2046FC00E3122C /* BallView.swift in Sources */,
 				7EE6263B1E1EB394004C9D9C /* AppDelegate.swift in Sources */,
