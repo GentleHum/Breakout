@@ -35,6 +35,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="lCw-SS-Axk"/>
+                    <connections>
+                        <outlet property="gameView" destination="4eF-fP-goD" id="3pf-CG-lWx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qLq-rd-m7T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
