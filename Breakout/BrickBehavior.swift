@@ -20,12 +20,7 @@ class BrickBehavior: UIDynamicBehavior {
         dib.elasticity = 0.75
         return dib
     }()
-    
-    func addBarrier(path: UIBezierPath, named name: String) {
-        collider.removeBoundary(withIdentifier: name as NSCopying)
-        collider.addBoundary(withIdentifier: name as NSCopying, for: path)
-    }
-    
+        
     
     override init() {
         super.init()

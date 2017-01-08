@@ -19,14 +19,14 @@ class BreakoutGameView: UIView, UIDynamicAnimatorDelegate {
     func dynamicAnimatorDidPause(_ animator: UIDynamicAnimator) {
     }
     
-//    private let dropBehavior = FallingObjectBehavior()
+    private let brickBehavior = BrickBehavior()
     
     public var animating: Bool = false {
         didSet {
             if animating {
-//                animator.addBehavior(dropBehavior)
+                animator.addBehavior(brickBehavior)
             } else {
-//                animator.removeBehavior(dropBehavior)
+                animator.removeBehavior(brickBehavior)
             }
         }
     }
@@ -54,6 +54,21 @@ class BreakoutGameView: UIView, UIDynamicAnimatorDelegate {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
+        addBricks()
+    }
+    
+    func addBricks() {
+        print("adding bricks")
+        let brickSize = CGSize(width: 20, height: 12)
+        let frame = CGRect(origin: CGPoint.zero, size: brickSize)
+//        frame.origin.x = CGFloat.random(max: dropsPerRow) * dropSize.width
+        
+        let brick = BrickView(frame: frame)
+        brick.backgroundColor = UIColor.random
+        
+        addSubview(brick)
+//        brickBehavior.addItem(brick)
     }
 
 }
