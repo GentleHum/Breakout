@@ -10,6 +10,12 @@ import UIKit
 
 class BreakoutGameView: UIView, UIDynamicAnimatorDelegate {
 
+    private struct GameLayout {
+        static let brickSeparatorWidth = 3
+        static let brickSeparatorHeight = 3
+        static let brickHeight = 12
+    }
+    
     private lazy var animator: UIDynamicAnimator = {
         let animator = UIDynamicAnimator(referenceView: self)
         animator.delegate = self
@@ -54,21 +60,37 @@ class BreakoutGameView: UIView, UIDynamicAnimatorDelegate {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        addBricks()
+        print("subviews.count: \(subviews.count)")  // zap
     }
     
-    func addBricks() {
-        print("adding bricks")
-        let brickSize = CGSize(width: 20, height: 12)
-        let frame = CGRect(origin: CGPoint.zero, size: brickSize)
-//        frame.origin.x = CGFloat.random(max: dropsPerRow) * dropSize.width
+    func addBricks(numberOfRows: Int, numberOfBricksPerRow: Int) {
+        print("adding bricks: rows: \(numberOfRows), bricksPerRow: \(numberOfBricksPerRow)")  // zap
         
-        let brick = BrickView(frame: frame)
-        brick.backgroundColor = UIColor.random
+        print("bounds: width: \(bounds.width); height: \(bounds.height)") // zap
+        print("frame.width: \(frame.width)")  // zap
         
-        addSubview(brick)
-//        brickBehavior.addItem(brick)
+        let brickWidth = ((Int(bounds.width) - GameLayout.brickSeparatorWidth) / numberOfBricksPerRow) - GameLayout.brickSeparatorWidth
+        print("brickWidth: \(brickWidth)") // zap
+        
+        
+        let brickSize = CGSize(width: brickWidth, height: GameLayout.brickHeight)
+        var brickFrame = CGRect(origin: CGPoint.zero, size: brickSize)
+        
+        for _ in 0..<numberOfRows {
+            brickFrame.origin.x = CGFloat(GameLayout.brickSeparatorWidth) // back to beginning of row
+            for brickNum in 0..<numberOfBricksPerRow {
+                let brick = BrickView(frame: brickFrame)
+                brick.backgroundColor = ((brickNum % 2) == 0) ? UIColor.red : UIColor.blue
+                
+                print("adding brick to frame: x: \(brickFrame.origin.x); y: \(brickFrame.origin.y)")  // zap
+                addSubview(brick)
+                //        brickBehavior.addItem(brick)
+                brickFrame.origin.x += CGFloat(brickWidth + GameLayout.brickSeparatorWidth)
+            }
+            brickFrame.origin.y += CGFloat(GameLayout.brickHeight + GameLayout.brickSeparatorHeight)
+        }
+        
+        
     }
 
 }

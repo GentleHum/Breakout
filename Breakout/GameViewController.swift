@@ -38,8 +38,8 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        //   
+        gameView.addBricks(numberOfRows: PropertySettings.numberOfBrickRows,
+                           numberOfBricksPerRow: PropertySettings.numberOfBricksPerRow)
     }
     
     
