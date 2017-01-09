@@ -23,7 +23,6 @@
 		7EFBD0AA1E2046EE00E3122C /* PaddleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBD0A91E2046EE00E3122C /* PaddleView.swift */; };
 		7EFBD0AC1E2046FC00E3122C /* BallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBD0AB1E2046FC00E3122C /* BallView.swift */; };
 		7EFBD0AF1E204AE500E3122C /* PropertySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBD0AE1E204AE500E3122C /* PropertySettings.swift */; };
-		EB2A39D51E212C7E0007A3A9 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2A39D41E212C7E0007A3A9 /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +56,6 @@
 		7EFBD0A91E2046EE00E3122C /* PaddleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddleView.swift; sourceTree = "<group>"; };
 		7EFBD0AB1E2046FC00E3122C /* BallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallView.swift; sourceTree = "<group>"; };
 		7EFBD0AE1E204AE500E3122C /* PropertySettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertySettings.swift; sourceTree = "<group>"; };
-		EB2A39D41E212C7E0007A3A9 /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +160,6 @@
 				7EAD465C1E22F09400689E10 /* BreakoutGameView.swift */,
 				7EAD46621E22F9A800689E10 /* BrickBehavior.swift */,
 				7EFBD0A71E2046DC00E3122C /* BrickView.swift */,
-				EB2A39D41E212C7E0007A3A9 /* GameView.swift */,
 				7EAD46601E22F88200689E10 /* PaddleBehavior.swift */,
 				7EFBD0A91E2046EE00E3122C /* PaddleView.swift */,
 			);
@@ -293,7 +290,6 @@
 				7EFBD0AC1E2046FC00E3122C /* BallView.swift in Sources */,
 				7EE6263B1E1EB394004C9D9C /* AppDelegate.swift in Sources */,
 				7EAD46611E22F88200689E10 /* PaddleBehavior.swift in Sources */,
-				EB2A39D51E212C7E0007A3A9 /* GameView.swift in Sources */,
 				7EFBD0A61E20457200E3122C /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

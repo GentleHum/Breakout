@@ -13,7 +13,7 @@ class BreakoutGameView: UIView, UIDynamicAnimatorDelegate {
     private struct GameLayout {
         static let brickSeparatorWidth = 3
         static let brickSeparatorHeight = 3
-        static let brickHeight = 12
+        static let brickHeight = 20
     }
     
     private lazy var animator: UIDynamicAnimator = {
@@ -64,12 +64,11 @@ class BreakoutGameView: UIView, UIDynamicAnimatorDelegate {
     }
     
     func addBricks(numberOfRows: Int, numberOfBricksPerRow: Int) {
-        print("adding bricks: rows: \(numberOfRows), bricksPerRow: \(numberOfBricksPerRow)")  // zap
+        print("bounds: width: \(bounds.size.width); height: \(bounds.size.height)") // zap
+        print("frame.width: \(frame.width); frame.height: \(frame.height)")  // zap
+        print("center: \(frame.midX)")  // zap
         
-        print("bounds: width: \(bounds.width); height: \(bounds.height)") // zap
-        print("frame.width: \(frame.width)")  // zap
-        
-        let brickWidth = ((Int(bounds.width) - GameLayout.brickSeparatorWidth) / numberOfBricksPerRow) - GameLayout.brickSeparatorWidth
+        let brickWidth = ((Int(self.bounds.size.width) - GameLayout.brickSeparatorWidth) / numberOfBricksPerRow) - GameLayout.brickSeparatorWidth
         print("brickWidth: \(brickWidth)") // zap
         
         
@@ -79,18 +78,22 @@ class BreakoutGameView: UIView, UIDynamicAnimatorDelegate {
         for _ in 0..<numberOfRows {
             brickFrame.origin.x = CGFloat(GameLayout.brickSeparatorWidth) // back to beginning of row
             for brickNum in 0..<numberOfBricksPerRow {
-                let brick = BrickView(frame: brickFrame)
-                brick.backgroundColor = ((brickNum % 2) == 0) ? UIColor.red : UIColor.blue
-                
-                print("adding brick to frame: x: \(brickFrame.origin.x); y: \(brickFrame.origin.y)")  // zap
-                addSubview(brick)
-                //        brickBehavior.addItem(brick)
+                addBrick(at: brickFrame, color: ((brickNum % 2) == 0) ? UIColor.red : UIColor.blue)
                 brickFrame.origin.x += CGFloat(brickWidth + GameLayout.brickSeparatorWidth)
             }
             brickFrame.origin.y += CGFloat(GameLayout.brickHeight + GameLayout.brickSeparatorHeight)
         }
         
+        brickFrame.origin.x = 0; brickFrame.origin.y = 0
+        addBrick(at: brickFrame, color: UIColor.green)
+    }
+    
+    func addBrick(at frame: CGRect, color: UIColor) {
+        let brick = BrickView(frame: frame)
+        brick.backgroundColor = color
+        print("adding brick: x: \(frame.origin.x); y: \(frame.origin.y), width: \(frame.width), height: \(frame.height)")  // zap
         
+        addSubview(brick)
     }
 
 }

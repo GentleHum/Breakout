@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,19 +23,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4eF-fP-goD" customClass="BreakoutGameView" customModule="Breakout" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="70" width="375" height="548"/>
+                                <rect key="frame" x="16" y="53" width="343" height="557"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4eF-fP-goD" firstAttribute="bottom" secondItem="xES-BN-bde" secondAttribute="top" id="4R7-SY-rgP"/>
-                            <constraint firstItem="4eF-fP-goD" firstAttribute="top" secondItem="RhE-Ky-URy" secondAttribute="bottom" constant="50" id="FN7-z6-w9J"/>
-                            <constraint firstAttribute="trailing" secondItem="4eF-fP-goD" secondAttribute="trailing" id="Qdf-5q-wLA"/>
-                            <constraint firstItem="4eF-fP-goD" firstAttribute="leading" secondItem="tsY-DI-9L8" secondAttribute="leading" id="mGU-Er-1TQ"/>
+                            <constraint firstItem="4eF-fP-goD" firstAttribute="top" secondItem="RhE-Ky-URy" secondAttribute="bottom" constant="33" id="TNr-9D-MCb"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="4eF-fP-goD" secondAttribute="leading" id="WWI-aL-MI9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4eF-fP-goD" secondAttribute="trailing" id="bo6-SV-Co8"/>
+                            <constraint firstItem="xES-BN-bde" firstAttribute="top" secondItem="4eF-fP-goD" secondAttribute="bottom" constant="8" symbolic="YES" id="d6y-u5-WNm"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="lCw-SS-Axk"/>
+                    <tabBarItem key="tabBarItem" title="Breakout" id="lCw-SS-Axk"/>
                     <connections>
                         <outlet property="gameView" destination="4eF-fP-goD" id="3pf-CG-lWx"/>
                     </connections>
@@ -104,7 +105,7 @@
                             <outlet property="delegate" destination="cEe-yw-for" id="Cxb-qg-jTa"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="aFM-pi-nsz"/>
+                    <tabBarItem key="tabBarItem" title="Settings" id="aFM-pi-nsz"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJq-Xs-9bI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

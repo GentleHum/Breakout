@@ -38,6 +38,7 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("gameView bounds: \(gameView.bounds)") // zap
         gameView.addBricks(numberOfRows: PropertySettings.numberOfBrickRows,
                            numberOfBricksPerRow: PropertySettings.numberOfBricksPerRow)
     }
