@@ -18,7 +18,8 @@ class GameViewController: UIViewController {
                 UIPanGestureRecognizer(target: gameView, action: #selector(BreakoutGameView.movePaddle(_:))))
         }
     }
-    
+
+
     func randomBallMovement(_ recognizer: UITapGestureRecognizer) {
         if recognizer.state == .ended {
             gameView.randomBallMovement()

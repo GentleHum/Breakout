@@ -84,8 +84,6 @@ class BreakoutGameView: UIView, UIDynamicAnimatorDelegate {
             brickFrame.origin.y += CGFloat(GameLayout.brickHeight + GameLayout.brickSeparatorHeight)
         }
         
-        brickFrame.origin.x = 0; brickFrame.origin.y = 0
-        addBrick(at: brickFrame, color: UIColor.green)
     }
     
     func addBrick(at frame: CGRect, color: UIColor) {
