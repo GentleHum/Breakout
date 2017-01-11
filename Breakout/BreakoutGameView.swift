@@ -64,11 +64,13 @@ class BreakoutGameView: UIView, UIDynamicAnimatorDelegate {
     }
     
     func addBricks(numberOfRows: Int, numberOfBricksPerRow: Int) {
+        let myBounds = superview!.bounds  // using superview because bounds isn't changing properly with changing device sizes
+        
+        print("superview bounds: width: \(myBounds.size.width); height: \(myBounds.size.height)") // zap
         print("bounds: width: \(bounds.size.width); height: \(bounds.size.height)") // zap
-        print("frame.width: \(frame.width); frame.height: \(frame.height)")  // zap
         print("center: \(frame.midX)")  // zap
         
-        let brickWidth = ((Int(self.bounds.size.width) - GameLayout.brickSeparatorWidth) / numberOfBricksPerRow) - GameLayout.brickSeparatorWidth
+        let brickWidth = ((Int(myBounds.size.width) - GameLayout.brickSeparatorWidth) / numberOfBricksPerRow) - GameLayout.brickSeparatorWidth
         print("brickWidth: \(brickWidth)") // zap
         
         
