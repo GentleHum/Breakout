@@ -16,6 +16,7 @@ struct PropertySettings {
         static let maximumNumberOfHitsPerBrick = "maximumNumberOfHitsPerBrick"
         static let numberOfBricksPerRow = "numberOfBricksPerRow"
         static let numberOfBrickRows = "numberOfBrickRows"
+        static let moveOnScreenTap = "moveOnScreenTap"
     }
     
     private struct SettingDefaults {
@@ -23,13 +24,15 @@ struct PropertySettings {
         static let maximumNumberOfHitsPerBrick = 1
         static let numberOfBricksPerRow = 10
         static let numberOfBrickRows = 5
+        static let moveOnScreenTap = true
     }
     
     static var minimumNumberOfHitsPerBrick = SettingDefaults.minimumNumberOfHitsPerBrick
     static var maximumNumberOfHitsPerBrick = SettingDefaults.maximumNumberOfHitsPerBrick
     static var numberOfBricksPerRow = SettingDefaults.numberOfBricksPerRow
     static var numberOfBrickRows = SettingDefaults.numberOfBrickRows
-    
+    static var moveOnScreenTap = SettingDefaults.moveOnScreenTap
+
     
     // load from NSUserDefaults
     static func load() {
@@ -39,10 +42,9 @@ struct PropertySettings {
                                           SettingDefaults.minimumNumberOfHitsPerBrick)
         maximumNumberOfHitsPerBrick = max(defaults.integer(forKey: FieldNames.maximumNumberOfHitsPerBrick),
                                           minimumNumberOfHitsPerBrick)
-        numberOfBricksPerRow = max(defaults.integer(forKey: FieldNames.numberOfBricksPerRow),
-                                   SettingDefaults.numberOfBricksPerRow)
-        numberOfBrickRows = max(defaults.integer(forKey: FieldNames.numberOfBrickRows),
-                                SettingDefaults.numberOfBrickRows)
+        numberOfBricksPerRow = max(defaults.integer(forKey: FieldNames.numberOfBricksPerRow), 1)
+        numberOfBrickRows = max(defaults.integer(forKey: FieldNames.numberOfBrickRows), 1)
+        moveOnScreenTap = defaults.bool(forKey: FieldNames.moveOnScreenTap)
     }
     
     // store to NSUserDefaults
@@ -53,6 +55,7 @@ struct PropertySettings {
         defaults.set(maximumNumberOfHitsPerBrick, forKey: FieldNames.maximumNumberOfHitsPerBrick)
         defaults.set(numberOfBricksPerRow, forKey: FieldNames.numberOfBricksPerRow)
         defaults.set(numberOfBrickRows, forKey: FieldNames.numberOfBrickRows)
+        defaults.set(moveOnScreenTap, forKey: FieldNames.moveOnScreenTap)
     }
     
 
