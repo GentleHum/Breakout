@@ -10,9 +10,18 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
 
+    @IBOutlet weak var bricksPerRowStepper: UIStepper!
+    @IBOutlet weak var bricksPerRowValue: UILabel!
+    
+    @IBAction func bricksPerRowStepperAction(_ sender: UIStepper) {
+        let stepperValue = Int(sender.value)
+        bricksPerRowValue.text = "\(stepperValue)"
+        PropertySettings.numberOfBricksPerRow = stepperValue
+        print("numberOfBricksPerRow: \(PropertySettings.numberOfBricksPerRow)")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
 
 }
