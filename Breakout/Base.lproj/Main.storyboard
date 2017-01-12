@@ -192,28 +192,33 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Os1-Wn-JTX">
-                                                    <rect key="frame" x="151" y="3" width="31" height="36"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Os1-Wn-JTX">
+                                                    <rect key="frame" x="158" y="11" width="8" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="lCT-tk-OpQ">
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="lCT-tk-OpQ">
                                                     <rect key="frame" x="218" y="7" width="94" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
                                                         <action selector="minHitsStepperAction:" destination="cEe-yw-for" eventType="valueChanged" id="Uwf-XC-Dnf"/>
                                                     </connections>
                                                 </stepper>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Min. hits per brick:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOG-kJ-hbx">
-                                                    <rect key="frame" x="8" y="3" width="142" height="36"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min. hits per brick:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOG-kJ-hbx">
+                                                    <rect key="frame" x="8" y="11" width="142" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="leadingMargin" secondItem="hOG-kJ-hbx" secondAttribute="leading" id="Ptg-a1-QcQ"/>
+                                                <constraint firstItem="lCT-tk-OpQ" firstAttribute="centerY" secondItem="WZT-HT-fZz" secondAttribute="centerY" id="Te0-8X-po7"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lCT-tk-OpQ" secondAttribute="trailing" id="eKe-0l-MV6"/>
+                                                <constraint firstItem="Os1-Wn-JTX" firstAttribute="centerY" secondItem="WZT-HT-fZz" secondAttribute="centerY" id="kTh-3G-8k5"/>
+                                                <constraint firstItem="hOG-kJ-hbx" firstAttribute="centerY" secondItem="WZT-HT-fZz" secondAttribute="centerY" id="oYG-ak-fob"/>
+                                                <constraint firstItem="Os1-Wn-JTX" firstAttribute="leading" secondItem="hOG-kJ-hbx" secondAttribute="trailing" constant="8" symbolic="YES" id="paj-zo-3JU"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ITp-21-qTQ">
