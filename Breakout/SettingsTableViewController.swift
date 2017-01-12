@@ -17,7 +17,6 @@ class SettingsTableViewController: UITableViewController {
         let stepperValue = Int(sender.value)
         bricksPerRowValue.text = "\(stepperValue)"
         PropertySettings.numberOfBricksPerRow = stepperValue
-        print("numberOfBricksPerRow: \(PropertySettings.numberOfBricksPerRow)")
     }
     
     
@@ -28,7 +27,6 @@ class SettingsTableViewController: UITableViewController {
         let stepperValue = Int(sender.value)
         brickRowsValue.text = "\(stepperValue)"
         PropertySettings.numberOfBrickRows = stepperValue
-        print("numberOfBrickRows: \(PropertySettings.numberOfBrickRows)")
     }
     
     
@@ -39,7 +37,11 @@ class SettingsTableViewController: UITableViewController {
         let stepperValue = Int(sender.value)
         minHitsPerBrickValue.text = "\(stepperValue)"
         PropertySettings.minimumNumberOfHitsPerBrick = stepperValue
-        print("minHitsPerBrick: \(PropertySettings.minimumNumberOfHitsPerBrick)")
+        if PropertySettings.minimumNumberOfHitsPerBrick > PropertySettings.maximumNumberOfHitsPerBrick {
+            maxHitsPerBrickValue.text = "\(stepperValue)"
+            maxHitsPerBrickStepper.value = Double(stepperValue)
+            PropertySettings.maximumNumberOfHitsPerBrick = stepperValue
+        }
     }
     
     
@@ -50,14 +52,17 @@ class SettingsTableViewController: UITableViewController {
         let stepperValue = Int(sender.value)
         maxHitsPerBrickValue.text = "\(stepperValue)"
         PropertySettings.maximumNumberOfHitsPerBrick = stepperValue
-        print("maxHitsPerBrick: \(PropertySettings.maximumNumberOfHitsPerBrick)")
+        if PropertySettings.maximumNumberOfHitsPerBrick < PropertySettings.minimumNumberOfHitsPerBrick {
+            minHitsPerBrickValue.text = "\(stepperValue)"
+            minHitsPerBrickStepper.value = Double(stepperValue)
+            PropertySettings.minimumNumberOfHitsPerBrick = stepperValue
+        }
     }
     
     
     @IBOutlet private weak var moveOnScreenTap: UISwitch!
     @IBAction private func moveOnScreenTapAction(_ sender: UISwitch) {
         PropertySettings.moveOnScreenTap = sender.isOn
-        print("moveOnScreenTap: \(PropertySettings.moveOnScreenTap)")
 
     }
     
@@ -65,7 +70,6 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var paddleSizeSegmentedControl: UISegmentedControl!
     @IBAction func paddleSizeChanged(_ sender: UISegmentedControl) {
         PropertySettings.paddleSize = sender.selectedSegmentIndex
-        print("paddleSize: \(PropertySettings.paddleSize)")
     }
     
     override func viewDidLoad() {
