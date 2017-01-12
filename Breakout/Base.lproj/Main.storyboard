@@ -157,7 +157,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KrF-lg-OAD">
-                                                    <rect key="frame" x="132" y="12" width="18" height="20.5"/>
+                                                    <rect key="frame" x="131" y="12" width="18" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -179,7 +179,7 @@
                                                 <constraint firstItem="KrF-lg-OAD" firstAttribute="centerY" secondItem="wNr-zN-pMl" secondAttribute="centerY" id="5Qs-hF-E3f"/>
                                                 <constraint firstItem="PJ7-0k-AfE" firstAttribute="centerY" secondItem="wNr-zN-pMl" secondAttribute="centerY" id="Gd3-Hu-IuE"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="PJ7-0k-AfE" secondAttribute="trailing" id="H2J-q8-SFK"/>
-                                                <constraint firstItem="KrF-lg-OAD" firstAttribute="leading" secondItem="0DT-k2-Klt" secondAttribute="trailing" constant="8" symbolic="YES" id="Rm1-j0-nrr"/>
+                                                <constraint firstItem="KrF-lg-OAD" firstAttribute="leading" secondItem="0DT-k2-Klt" secondAttribute="trailing" constant="7" id="Rm1-j0-nrr"/>
                                                 <constraint firstItem="0DT-k2-Klt" firstAttribute="centerY" secondItem="wNr-zN-pMl" secondAttribute="centerY" id="caO-HU-mTP"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="0DT-k2-Klt" secondAttribute="leading" id="hqY-Yf-yIS"/>
                                             </constraints>
@@ -228,28 +228,33 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Max. hits per brick:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3c6-h3-Nxh">
-                                                    <rect key="frame" x="8" y="3" width="146" height="36"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max. hits per brick:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3c6-h3-Nxh">
+                                                    <rect key="frame" x="8" y="11" width="146" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9Y-sK-EGw">
-                                                    <rect key="frame" x="151" y="3" width="31" height="36"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9Y-sK-EGw">
+                                                    <rect key="frame" x="159" y="11" width="8" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="jQk-7a-xrl">
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="jQk-7a-xrl">
                                                     <rect key="frame" x="218" y="7" width="94" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
                                                         <action selector="maxHitsStepperAction:" destination="cEe-yw-for" eventType="valueChanged" id="bWo-a4-qBu"/>
                                                     </connections>
                                                 </stepper>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jQk-7a-xrl" firstAttribute="centerY" secondItem="xvT-sa-oX0" secondAttribute="centerY" id="O05-Co-i4p"/>
+                                                <constraint firstItem="j9Y-sK-EGw" firstAttribute="centerY" secondItem="xvT-sa-oX0" secondAttribute="centerY" id="ZvT-TR-G9C"/>
+                                                <constraint firstItem="3c6-h3-Nxh" firstAttribute="centerY" secondItem="xvT-sa-oX0" secondAttribute="centerY" id="bxf-dU-WNW"/>
+                                                <constraint firstItem="j9Y-sK-EGw" firstAttribute="leading" secondItem="3c6-h3-Nxh" secondAttribute="trailing" constant="5" id="daA-Zf-CYk"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="3c6-h3-Nxh" secondAttribute="leading" id="nMW-3f-5T7"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="jQk-7a-xrl" secondAttribute="trailing" id="uIt-XX-V7S"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
