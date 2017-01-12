@@ -17,6 +17,7 @@ struct PropertySettings {
         static let numberOfBricksPerRow = "numberOfBricksPerRow"
         static let numberOfBrickRows = "numberOfBrickRows"
         static let moveOnScreenTap = "moveOnScreenTap"
+        static let paddleSize = "paddleSize"
     }
     
     private struct SettingDefaults {
@@ -25,6 +26,7 @@ struct PropertySettings {
         static let numberOfBricksPerRow = 10
         static let numberOfBrickRows = 5
         static let moveOnScreenTap = true
+        static let paddleSize = 0
     }
     
     static var minimumNumberOfHitsPerBrick = SettingDefaults.minimumNumberOfHitsPerBrick
@@ -32,6 +34,7 @@ struct PropertySettings {
     static var numberOfBricksPerRow = SettingDefaults.numberOfBricksPerRow
     static var numberOfBrickRows = SettingDefaults.numberOfBrickRows
     static var moveOnScreenTap = SettingDefaults.moveOnScreenTap
+    static var paddleSize = SettingDefaults.paddleSize
 
     
     // load from NSUserDefaults
@@ -45,6 +48,7 @@ struct PropertySettings {
         numberOfBricksPerRow = max(defaults.integer(forKey: FieldNames.numberOfBricksPerRow), 1)
         numberOfBrickRows = max(defaults.integer(forKey: FieldNames.numberOfBrickRows), 1)
         moveOnScreenTap = defaults.bool(forKey: FieldNames.moveOnScreenTap)
+        paddleSize = defaults.integer(forKey: FieldNames.paddleSize)
     }
     
     // store to NSUserDefaults
@@ -56,6 +60,7 @@ struct PropertySettings {
         defaults.set(numberOfBricksPerRow, forKey: FieldNames.numberOfBricksPerRow)
         defaults.set(numberOfBrickRows, forKey: FieldNames.numberOfBrickRows)
         defaults.set(moveOnScreenTap, forKey: FieldNames.moveOnScreenTap)
+        defaults.set(paddleSize, forKey: FieldNames.paddleSize)
     }
     
 

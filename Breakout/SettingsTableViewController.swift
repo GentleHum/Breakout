@@ -62,6 +62,11 @@ class SettingsTableViewController: UITableViewController {
     }
     
     
+    @IBOutlet weak var paddleSizeSegmentedControl: UISegmentedControl!
+    @IBAction func paddleSizeChanged(_ sender: UISegmentedControl) {
+        PropertySettings.paddleSize = sender.selectedSegmentIndex
+        print("paddleSize: \(PropertySettings.paddleSize)")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +74,12 @@ class SettingsTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        updateScreenSettings()
+        
+    }
+    
+    private func updateScreenSettings() {
         bricksPerRowValue.text = "\(PropertySettings.numberOfBricksPerRow)"
         bricksPerRowStepper.value = Double(PropertySettings.numberOfBricksPerRow)
         
@@ -82,12 +93,12 @@ class SettingsTableViewController: UITableViewController {
         maxHitsPerBrickStepper.value = Double(PropertySettings.maximumNumberOfHitsPerBrick)
         
         moveOnScreenTap.isOn = PropertySettings.moveOnScreenTap
+        paddleSizeSegmentedControl.selectedSegmentIndex = PropertySettings.paddleSize
         
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("storing properties from viewWillDisappear")  // zap
         PropertySettings.store()
     }
 }

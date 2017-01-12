@@ -121,6 +121,9 @@
                                                         <segment title="Medium"/>
                                                         <segment title="Large"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="paddleSizeChanged:" destination="cEe-yw-for" eventType="valueChanged" id="rPp-FT-FC0"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                             <constraints>
@@ -298,6 +301,7 @@
                         <outlet property="minHitsPerBrickStepper" destination="lCT-tk-OpQ" id="IQG-B6-vU9"/>
                         <outlet property="minHitsPerBrickValue" destination="Os1-Wn-JTX" id="hx8-9z-aV1"/>
                         <outlet property="moveOnScreenTap" destination="ed2-o5-NfN" id="a3t-Pr-nSP"/>
+                        <outlet property="paddleSizeSegmentedControl" destination="WLC-23-BfO" id="gNU-0L-BfV"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJq-Xs-9bI" userLabel="First Responder" sceneMemberID="firstResponder"/>
