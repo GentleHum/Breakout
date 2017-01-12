@@ -9,7 +9,7 @@
 import UIKit
 
 class SettingsTableViewController: UITableViewController {
-
+    
     @IBOutlet private weak var bricksPerRowStepper: UIStepper!
     @IBOutlet private weak var bricksPerRowValue: UILabel!
     
@@ -63,7 +63,6 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet private weak var moveOnScreenTap: UISwitch!
     @IBAction private func moveOnScreenTapAction(_ sender: UISwitch) {
         PropertySettings.moveOnScreenTap = sender.isOn
-
     }
     
     
@@ -78,9 +77,7 @@ class SettingsTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         updateScreenSettings()
-        
     }
     
     private func updateScreenSettings() {
@@ -97,6 +94,7 @@ class SettingsTableViewController: UITableViewController {
         maxHitsPerBrickStepper.value = Double(PropertySettings.maximumNumberOfHitsPerBrick)
         
         moveOnScreenTap.isOn = PropertySettings.moveOnScreenTap
+        
         paddleSizeSegmentedControl.selectedSegmentIndex = PropertySettings.paddleSize
         
     }
