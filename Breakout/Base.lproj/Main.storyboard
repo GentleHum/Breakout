@@ -107,6 +107,28 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="827-BT-HHp" id="RNF-zK-1HJ">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paddle size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tx7-fW-Aw0">
+                                                    <rect key="frame" x="8" y="11" width="92" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WLC-23-BfO">
+                                                    <rect key="frame" x="121" y="7" width="191" height="29"/>
+                                                    <segments>
+                                                        <segment title="Small"/>
+                                                        <segment title="Medium"/>
+                                                        <segment title="Large"/>
+                                                    </segments>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="WLC-23-BfO" firstAttribute="centerY" secondItem="RNF-zK-1HJ" secondAttribute="centerY" id="5kG-HS-aV6"/>
+                                                <constraint firstItem="Tx7-fW-Aw0" firstAttribute="centerY" secondItem="RNF-zK-1HJ" secondAttribute="centerY" id="I0v-Rs-pCX"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="Tx7-fW-Aw0" secondAttribute="leading" id="Zsv-Of-4BW"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="WLC-23-BfO" secondAttribute="trailing" id="s88-sj-Tz4"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -280,7 +302,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJq-Xs-9bI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-499" y="784"/>
+            <point key="canvasLocation" x="-500.625" y="783.80281690140851"/>
         </scene>
     </scenes>
 </document>
