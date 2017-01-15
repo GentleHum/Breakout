@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EA1FBE91E2C1C7F0043E578 /* BreakoutBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1FBE81E2C1C7F0043E578 /* BreakoutBehavior.swift */; };
+		7EA1FBEB1E2C1E440043E578 /* NamedBezierPathsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1FBEA1E2C1E440043E578 /* NamedBezierPathsView.swift */; };
 		7EAD465B1E22F03700689E10 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD465A1E22F03700689E10 /* UIKit+Extensions.swift */; };
 		7EAD465D1E22F09400689E10 /* BreakoutGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD465C1E22F09400689E10 /* BreakoutGameView.swift */; };
 		7EAD465F1E22F83400689E10 /* BallBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD465E1E22F83400689E10 /* BallBehavior.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7EA1FBE81E2C1C7F0043E578 /* BreakoutBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakoutBehavior.swift; sourceTree = "<group>"; };
+		7EA1FBEA1E2C1E440043E578 /* NamedBezierPathsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamedBezierPathsView.swift; sourceTree = "<group>"; };
 		7EAD465A1E22F03700689E10 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
 		7EAD465C1E22F09400689E10 /* BreakoutGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakoutGameView.swift; sourceTree = "<group>"; };
 		7EAD465E1E22F83400689E10 /* BallBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallBehavior.swift; sourceTree = "<group>"; };
@@ -157,9 +161,11 @@
 			children = (
 				7EAD465E1E22F83400689E10 /* BallBehavior.swift */,
 				7EFBD0AB1E2046FC00E3122C /* BallView.swift */,
+				7EA1FBE81E2C1C7F0043E578 /* BreakoutBehavior.swift */,
 				7EAD465C1E22F09400689E10 /* BreakoutGameView.swift */,
 				7EAD46621E22F9A800689E10 /* BrickBehavior.swift */,
 				7EFBD0A71E2046DC00E3122C /* BrickView.swift */,
+				7EA1FBEA1E2C1E440043E578 /* NamedBezierPathsView.swift */,
 				7EAD46601E22F88200689E10 /* PaddleBehavior.swift */,
 				7EFBD0A91E2046EE00E3122C /* PaddleView.swift */,
 			);
@@ -287,6 +293,8 @@
 				7EAD46631E22F9A800689E10 /* BrickBehavior.swift in Sources */,
 				7EAD465D1E22F09400689E10 /* BreakoutGameView.swift in Sources */,
 				7EFBD0AA1E2046EE00E3122C /* PaddleView.swift in Sources */,
+				7EA1FBEB1E2C1E440043E578 /* NamedBezierPathsView.swift in Sources */,
+				7EA1FBE91E2C1C7F0043E578 /* BreakoutBehavior.swift in Sources */,
 				7EFBD0AC1E2046FC00E3122C /* BallView.swift in Sources */,
 				7EE6263B1E1EB394004C9D9C /* AppDelegate.swift in Sources */,
 				7EAD46611E22F88200689E10 /* PaddleBehavior.swift in Sources */,
