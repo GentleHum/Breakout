@@ -31,6 +31,7 @@ class BreakoutGameView: NamedBezierPathsView, UIDynamicAnimatorDelegate {
     }
     
     private var bricks = [Array<BrickView>]()
+    private let brickColors = [UIColor.black, UIColor.blue, UIColor.red, UIColor.gray, UIColor.purple, UIColor.orange]
     
     private let brickBehavior = BrickBehavior()
     private let breakoutBehavior = BreakoutBehavior()
@@ -41,15 +42,14 @@ class BreakoutGameView: NamedBezierPathsView, UIDynamicAnimatorDelegate {
     public var animating: Bool = false {
         didSet {
             if animating {
-                animator.addBehavior(brickBehavior)
+                animator.addBehavior(breakoutBehavior)
             } else {
-                animator.removeBehavior(brickBehavior)
+                animator.removeBehavior(breakoutBehavior)
             }
         }
     }
     
     func randomBallMovement() {
-        
     }
     
     func movePaddle(_ recognizer: UIPanGestureRecognizer) {
@@ -79,7 +79,7 @@ class BreakoutGameView: NamedBezierPathsView, UIDynamicAnimatorDelegate {
     }
     
 
-    
+    // layout the bricks from the private bricks array on the screen
     func layoutBricks() {
         print("layoutBricks: \(bricks.count)")  // zap
         print("bounds: width: \(bounds.size.width); height: \(bounds.size.height)") // zap
@@ -102,23 +102,32 @@ class BreakoutGameView: NamedBezierPathsView, UIDynamicAnimatorDelegate {
             brickFrame.origin.y += CGFloat(GameLayout.brickHeight + GameLayout.brickSeparatorHeight)
         }
     }
-    
-    func addBrick(at frame: CGRect, color: UIColor) {
-        let brick = BrickView(frame: frame)
-        brick.backgroundColor = color
-        addSubview(brick)
-    }
-    
+
+    // add the appropriate number of bricks to the private bricks array
     func addBricks(numberOfRows: Int, numberOfBricksPerRow: Int) {
+        let brickHitRange = UInt32(PropertySettings.maximumNumberOfHitsPerBrick - PropertySettings.minimumNumberOfHitsPerBrick)
         bricks.removeAll()
         for _ in 0..<numberOfRows {
             var brickRow = Array<BrickView>()
-            for brickNumber in 0..<numberOfBricksPerRow {
+            for _ in 0..<numberOfBricksPerRow {
                 let brick = BrickView(frame: frame)
-                brick.backgroundColor = ((brickNumber % 2) == 0) ? UIColor.red : UIColor.blue
+                let hitIncrement = round((Double(arc4random()) * Double(brickHitRange)) / Double(UInt32.max))
+                brick.hitsToDestroy = PropertySettings.minimumNumberOfHitsPerBrick + Int(hitIncrement)
+                brick.color = brickColors[brick.hitsToDestroy]
                 brickRow.append(brick)
             }
             bricks.append(brickRow)
+        }
+        
+    }
+    
+    func decrementBrickHitCounts() {
+        for rowNumber in 0..<bricks.count {
+            let brickRow = bricks[rowNumber]
+            for brickNumber in 0..<brickRow.count {
+                let brick = brickRow[brickNumber]
+                brick.processHit()
+            }
         }
         
     }

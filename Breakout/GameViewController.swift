@@ -19,6 +19,9 @@ class GameViewController: UIViewController {
         }
     }
 
+    @IBAction func hitBricks(_ sender: UIButton) {
+        gameView.decrementBrickHitCounts()
+    }
 
     func randomBallMovement(_ recognizer: UITapGestureRecognizer) {
         if recognizer.state == .ended {

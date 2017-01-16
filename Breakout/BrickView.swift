@@ -10,20 +10,31 @@ import UIKit
 
 class BrickView: UIView {
     
-    var width = 20 { didSet { setNeedsDisplay() } }
-    var height = 10 { didSet { setNeedsDisplay() } }
-    var color = UIColor.blue { didSet { setNeedsDisplay() } }
-    var hitCount = 0 { didSet { setNeedsDisplay() } }
-    var hitsToDestroy = 1 { didSet { setNeedsDisplay() } }
+    // public variables
+    var color = UIColor.blue { didSet { setNeedsDisplay(); updateUI() } }
+    var hitCount = 1 { didSet { setNeedsDisplay(); updateUI() } }  // hits remaining to destroy the brick
+    var hitsToDestroy = 1 { didSet { setNeedsDisplay(); hitCount = hitsToDestroy; updateUI() } }
     
-    
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    func processHit() {
+        if hitCount > 0 {
+            hitCount -= 1
+        }
     }
-    */
+    
+    private func updateUI() {
+        var red: CGFloat = 0.0
+        var green: CGFloat = 0.0
+        var blue: CGFloat = 0.0
+        var alpha: CGFloat = 0.0
+        color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        
+        print("updateUI: hitsToDestroy: \(hitsToDestroy); hitCount: \(hitCount)")  // zap
+        let alphaPercent = 1.0 - (Float(hitsToDestroy - hitCount) / Float(hitsToDestroy))
+        print("updateUI: alphaPercent: \(alphaPercent)")  // zap
+        
+        backgroundColor = UIColor(colorLiteralRed: Float(red), green: Float(green), blue: Float(blue), alpha: alphaPercent)
+        print("updateUI: backgroundColor: \(backgroundColor)")  // zap
+    }
+    
 
 }
